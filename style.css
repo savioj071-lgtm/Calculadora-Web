@@ -1,0 +1,145 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculadora-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#visor {
+    width: 100%;
+    height: 70px;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin-bottom: 20px;
+    pointer-events: none; 
+}
+
+.botoes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.botoes-grid button {
+    font-size: 1.4em;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #e9ecef;
+    transition: background-color 0.2s;
+}
+
+.botoes-grid button:hover {
+    background-color: #d1d5db;
+}
+
+.botoes-grid button:active {
+    transform: scale(0.97);
+}
+
+.btn-op {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-op:hover {
+    background-color: #e0a800;
+}
+
+.btn-ctrl {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-ctrl:hover {
+    background-color: #5a6268;
+}
+
+.btn-igual {
+    grid-column: span 2;
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-igual:hover {
+    background-color: #0056b3;
+}
+
+.log-section {
+    width: 100%;
+    max-width: 400px; 
+    margin: 20px auto;
+}
+
+#btn-toggle-log {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#btn-toggle-log:hover {
+    background-color: #138496;
+}
+
+#log-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#log-lista {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+#log-lista li {
+    font-family: monospace;
+    font-size: 0.95em;
+    padding: 6px 0;
+    border-bottom: 1px dashed #ddd;
+    word-wrap: break-word;
+}
+
+#log-lista li:last-child {
+    border-bottom: none;
+}
